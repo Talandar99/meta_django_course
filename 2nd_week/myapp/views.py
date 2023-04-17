@@ -3,7 +3,8 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse("<h1> Hello From App </h1>")
+    path = request.path
+    return HttpResponse(path, content_type='text/html', charset='utf8')
 
 
 def say_hello(request):
